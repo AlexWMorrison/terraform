@@ -10,14 +10,13 @@ variable "cdn_profile_rg_name" {
   description = "Existing CDN Profile Resoruce Group"
 }
 
-variable "app_static_blob_name" {
-  type        = string
-  default     = ""
-  description = "Existing Storage Account that hosts the Static Website"
+variable "settings" {
+  default     = {}
+  description = "(Required) Used to handle passthrough parameters"
 }
 
-variable "app_static_blob_rg_name" {
-  type        = string
-  default     = ""
-  description = "Existing Storage Account Resource Group "
+variable "base_tags" {
+  type        = map(any)
+  default     = {}
+  description = "Base tags for the resource"
 }

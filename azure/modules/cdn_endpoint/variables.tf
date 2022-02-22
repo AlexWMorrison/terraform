@@ -10,6 +10,17 @@ variable "cdn_profile_rg_name" {
   description = "Existing CDN Profile Resoruce Group"
 }
 
+variable "settings" {
+  default     = {}
+  description = "(Required) Used to handle passthrough parameters"
+}
+
+variable "base_tags" {
+  type        = map(any)
+  default     = {}
+  description = "Base tags for the resource"
+}
+
 variable "app_static_blob_name" {
   type        = string
   default     = ""
