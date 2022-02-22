@@ -7,5 +7,6 @@ resource "azurerm_cdn_endpoint" {
     origin {
         name = var.settings.origin.name
         host_name = data.azurerm_storage_account.staticWebsite.host_name
+        #create storage account for this excersize 
     }
 }
