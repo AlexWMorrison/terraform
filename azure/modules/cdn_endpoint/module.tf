@@ -5,7 +5,7 @@ resource "azurerm_cdn_endpoint" {
     resource_group_name = data.azurerm_cdn_profile.cdnProfile.resource_group_name
 
     origin {
-        name = "testapp-dev"
+        name = var.settings.origin.name
         host_name = data.azurerm_storage_account.staticWebsite.host_name
     }
 }
